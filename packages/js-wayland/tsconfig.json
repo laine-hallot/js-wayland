@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "esModuleInterop": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "allowJs": true,
+    "outDir": "dist/"
+  },
+  "files": [
+    "types.d.ts",
+    "src/index.ts",
+    "src/helper.ts",
+    "./run.ts",
+    "bindgen-out/js_externs.js",
+    "shermes_helpers/ffi_helpers.js",
+    "shermes_helpers/asciiz.js"
+  ]
+}

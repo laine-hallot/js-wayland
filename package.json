@@ -1,0 +1,27 @@
+{
+  "name": "js-wayland",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ffigen": "python3 ./vendor/hermes-src/tools/ffigen/ffigen.py $@",
+    "shermes": "./vendor/hermes-src/build/bin/shermes $@"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laine-hallot/static-hermes-ffigen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/laine-hallot/static-hermes-ffigen/issues"
+  },
+  "homepage": "https://github.com/laine-hallot/static-hermes-ffigen#readme",
+  "workspaces": [
+    "packages/cli-tools",
+    "packages/js-wayland"
+  ]
+}
