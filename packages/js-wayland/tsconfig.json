@@ -13,7 +13,6 @@
   "files": [
     "types.d.ts",
     "src/index.ts",
-    "src/helper.ts",
     "./run.ts",
     "bindgen-out/js_externs.js",
     "shermes_helpers/ffi_helpers.js",

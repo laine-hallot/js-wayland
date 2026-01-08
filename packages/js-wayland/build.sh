@@ -14,7 +14,7 @@ ar r dist/c/libjswayland.a dist/c/js_externs_cwrap.o dist/c/js_externs.o dist/c/
 
 #ar r dist/c/libjswayland.a dist/c/libjswayland.o dist/c/js_externs_cwrap.o
 
-npx shermes shermes_helpers/ffi_helpers.js shermes_helpers/asciiz.js bindgen-out/js_externs.js src/helper.ts run.ts \
+npx shermes shermes_helpers/ffi_helpers.js shermes_helpers/asciiz.js bindgen-out/js_externs.js run.ts \
 -typed  \
 -Xes6-block-scoping \
 -g \
