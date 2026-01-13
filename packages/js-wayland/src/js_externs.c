@@ -57,7 +57,7 @@ struct wl_registry * wl_display_get_registry_impl(struct wl_display *display) {
 void attach_registry_listener(void *data) {
     struct client_state *state = data;
 
-    wl_registry_add_listener(state->wl_registry, &registry_listener, &state);
+    wl_registry_add_listener(state->wl_registry, &registry_listener, data);
 }
 
 struct client_state* create_heap_client_state () {
@@ -71,6 +71,7 @@ void client_state_add_display (void* data, void* stuff_ptr) {
     struct wl_display* display_ptr = stuff_ptr;
     state->wl_display = display_ptr;
 }
+
 void client_state_add_registry (void* data, void* stuff_ptr) {
     struct client_state* state = data;
     struct wl_registry* registry_ptr = stuff_ptr;
@@ -85,15 +86,16 @@ void wrapped_roundtrip(void* client_state_ptr) {
     printf("js_extern.c: wl_display_roundtrip returned %d\n", result);
 }
 
-
 void* create_and_init_client_state(void) {
     struct client_state *state = malloc(sizeof(struct client_state));
     memset(state, 0, sizeof(struct client_state));
 
     state->wl_display = wl_display_connect(NULL);
     state->wl_registry = wl_display_get_registry_impl(state->wl_display);
+    printf("js_extern.c: about to call wl_display_roundtrip\n");
     wl_registry_add_listener(state->wl_registry, &registry_listener, state);
-    wl_display_roundtrip(state->wl_display);
+    int result = wl_display_roundtrip(state->wl_display);
+    printf("js_extern.c: wl_display_roundtrip returned %d\n", result);
 
     return state;
 }

@@ -1,8 +1,8 @@
 # JS Wayland
 
-This repo is meant to be a set of Wayland function bindings for JS compiled with Shermes, but due to issues that occur when switching back to JS execution after running C callbacks in the Wayland event loop the library doesn't work at the moment.
+This repo is meant to be a set of Wayland function bindings for JS compiled with Shermes, but its very not unfinished.
 
-The only reason this repo is up in its current state is to provide an easy way to reproduce the issue.
+The only reason this repo was made public in its current state is because I needed help dealing with what I thought was a Shermes bug (it wasn't I'm just dumb).
 
 ## Dependencies
 
@@ -14,4 +14,4 @@ Everything is defined in `./flake.nix` so if you're using Nix you can just run `
 1. `npm i`
 1. `./build-hermes.sh`
 1. `npm -w ./packages/js-wayland run build` - build the JS Wayland and a executable that shows an example window (well that last part is broken)
-1. `./packages/js-wayland/run.o` - run the application
+1. `./packages/js-wayland/dist/run.o` - run the application

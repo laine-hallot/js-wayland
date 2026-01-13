@@ -18,7 +18,7 @@ npx shermes shermes_helpers/ffi_helpers.js shermes_helpers/asciiz.js bindgen-out
 -typed  \
 -Xes6-block-scoping \
 -g \
--o run.o \
+-o dist/run.o \
 -Ldist/c \
 -ljswayland \
 -lwayland-client \
