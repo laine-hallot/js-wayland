@@ -13,5 +13,5 @@ Everything is defined in `./flake.nix` so if you're using Nix you can just run `
 1. `git clone --recursive git@github.com:laine-hallot/js-wayland.git`
 1. `npm i`
 1. `./build-hermes.sh`
-1. `npm -w ./packages/js-wayland run build` - build the JS Wayland and a executable that shows an example window (well that last part is broken)
+1. `npm -w ./packages/js-wayland run build` - build the JS Wayland and a executable that shows an example window
 1. `./packages/js-wayland/dist/run.o` - run the application
