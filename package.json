@@ -22,6 +22,8 @@
   "homepage": "https://github.com/laine-hallot/static-hermes-ffigen#readme",
   "workspaces": [
     "packages/cli-tools",
-    "packages/js-wayland"
+    "packages/js-wayland",
+    "packages/example",
+    "packages/js-wayland-runtime"
   ]
 }

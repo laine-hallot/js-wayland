@@ -33,22 +33,10 @@ class ClientStateStruct {
   }
 }
 
-let awa = $SHBuiltin.c_null();
-const thing = {
-  set thing(val: c_ptr) {
-    awa = val;
-  },
-  get thing() {
-    return awa;
-  },
-};
-
 const runWlExample = () => {
   const clientState = new ClientStateStruct();
 
-  const NULL = $SHBuiltin.c_null();
-  // @ts-expect-error -- Shermes can handle casting `c_null` to `c_ptr` but that makes the typescript mad
-  clientState.set_wl_display(_wl_display_connect(NULL));
+  clientState.set_wl_display(wl_display_connect());
 
   clientState.set_wl_registry(_wl_display_get_registry(clientState.wl_display));
 
